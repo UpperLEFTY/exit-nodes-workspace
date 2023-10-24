@@ -19,19 +19,19 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "start:docker": "docker compose up --remove-orphans",
-  "build:docker": "docker compose build",
-  "clean:docker": "docker compose down --remove-orphans --volumes --rmi local",
-  "lint": "eslint --fix --ext .js,.jsx .",
-  "lint:no-fix": "eslint --ext .js,.jsx .",
-  "test": "react-scripts test --coverage --watchAll=false --env=jsdom --maxWorkers=50%",
-  "test:single": "react-scripts test App.test.js --watchAll=false",
-  "test:update-snaps": "react-scripts test -u --watchAll=false",
-  "test:no-cov": "react-scripts test --watchAll=false",
-  "test:watch": "react-scripts test"
-},
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "start:docker": "docker compose up --remove-orphans",
+    "build:docker": "docker compose build",
+    "clean:docker": "docker compose down --remove-orphans --volumes --rmi local",
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "lint:no-fix": "eslint --ext .js,.jsx .",
+    "test": "react-scripts test --coverage --watchAll=false --env=jsdom --maxWorkers=50%",
+    "test:single": "react-scripts test App.test.js --watchAll=false",
+    "test:update-snaps": "react-scripts test -u --watchAll=false",
+    "test:no-cov": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
