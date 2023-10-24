@@ -1,4 +1,4 @@
-// This file handles ESLINT policies and rules for linting our code repo
+// This file handles ESLINT policies and rules for linting this code repo
 {
   "env": {
     "browser": true,
