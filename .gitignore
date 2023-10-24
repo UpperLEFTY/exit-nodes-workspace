@@ -5,6 +5,18 @@
 /.pnp
 .pnp.js
 
+# Directories #
+################
+**/*.log
+.vscode
+.vs
+.eslintcache
+**/node_modules
+app/build/
+app/dist/
+app/.cache/
+app/.vscode/
+
 # testing
 /coverage
 
