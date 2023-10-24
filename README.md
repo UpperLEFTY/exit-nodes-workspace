@@ -64,7 +64,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
  - Try restarting your machince.
  - Clearing cookies or clearing your cache.
 
-    _ `npm cache clean --force`
+    - `npm cache clean --force`
 
  - Finally if the steps above fail, try the commands below.
  - Docker commands must be run in the order listed below.
