@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `npm run start:docker`
 
-You should run this command if they want to spin out the application.
+Run this command if you want to spin out the application.
 Runs the app in the development mode in a docker container.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 

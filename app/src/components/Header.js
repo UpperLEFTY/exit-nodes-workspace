@@ -26,7 +26,10 @@ const Header = ({ darkMode, setDarkMode }) => {
   useEffect(() => {
     axios.get('/api/blog-title')
       .then((response) => {
-        setBlogTitle(response.data.title);
+        const title = response.data?.title; // Use optional chaining to access the title property
+        if (title) {
+          setBlogTitle(title);
+        }
       })
       .catch((error) => {
         console.error('Error retrieving blog title: ', error);

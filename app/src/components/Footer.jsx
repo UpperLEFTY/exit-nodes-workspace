@@ -24,11 +24,11 @@ const Footer = () => {
     <footer className={`${classes.footer} footer`}>
       <div className='container'>
         <div>
-          <a href='mailto:upperlefty@zoho.eu?Subject=Hey,%20Essence!&body=Just%20wanted%20to%20reach%20out%20and...' aria-label='Email upperlefty'>
+          <a href='mailto:upperlefty@zoho.eu?Subject=Hi,%20Essence!&body=Just%20wanted%20to%20reach%20out%20and...' aria-label='Email upperlefty'>
             upperlefty@zoho.eu
           </a>
         </div>
-        <p>&copy; 2023 Exit-Nodes. All rights reserved.</p>
+        <p>&copy; 2024 Exit-Nodes. All rights reserved.</p>
       </div>
     </footer>
   );

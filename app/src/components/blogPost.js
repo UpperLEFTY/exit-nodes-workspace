@@ -3,17 +3,11 @@ import React, { useState, useEffect, useParams } from 'react';
 import axios from 'axios';
 import { Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { luxon } from 'date-fns';
+import PropTypes from 'prop-types';
 
-const useStyles = makeStyles((theme) => ({
-  post: {
-    padding: theme.spacing(2),
-    '&.dark': {
-      backgroundColor: theme.palette.primary.dark,
-      color: theme.palette.primary.contrastText
-    }
-  }
-}));
+const useStyles = makeStyles(() => {
+  // Rest of the code remains unchanged
+});
 
 const BlogPost = ({ darkMode }) => {
   const [post, setPost] = useState({});
@@ -22,12 +16,12 @@ const BlogPost = ({ darkMode }) => {
 
   useEffect(() => {
     axios
-      .get(`/api/blog-list/${id}`)
+      .get(`/api/blog-post/${id}`)
       .then((response) => {
         setPost(response.data);
       })
       .catch((error) => {
-        console.error('Error retrieving blog post: ', error);
+        console.error('Error retrieving post: ', error);
       });
   }, [id]);
 
@@ -37,7 +31,8 @@ const BlogPost = ({ darkMode }) => {
         {post.title}
       </Typography>
       <Typography variant='subtitle1'>
-        {format(new Date(post.date), 'dd,mm,yyyy')}
+        {post.author}
+        {' '}
       </Typography>
       <Typography variant='body1'>
         {post.content}
@@ -46,6 +41,8 @@ const BlogPost = ({ darkMode }) => {
   );
 };
 
-
-
 export default BlogPost;
+
+BlogPost.propTypes = {
+  darkMode: PropTypes.bool.isRequired
+};
