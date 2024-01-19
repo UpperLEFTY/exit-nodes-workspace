@@ -1,24 +1,26 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import BlogPost from './components/blogPost';
+import DarkModeToggle from './components/darkModeToggle';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NotFound from './components/NotFound';
 
 const App = () => (
   <div className='App'>
-    <header className='App-header'>
-      <p>
-        Edit
-        {' '}
-        <code>src/App.js</code>
-        {' '}
-        and save to reload.
-      </p>
-      <a
-        className='App-link'
-        href='https://reactjs.org'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        Learn React
-      </a>
-    </header>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path='/' component={BlogPost} />
+        <Route exact path='/darkMode' component={DarkModeToggle} />
+        <Route component={NotFound} />
+      </Switch>
+      <Footer />
+    </Router>
   </div>
 );
 

@@ -7,7 +7,7 @@ COPY package.json /app
 
 COPY package-lock.json /app
 
-RUN npm install --production
+RUN npm ci
 
 COPY . /app
 
